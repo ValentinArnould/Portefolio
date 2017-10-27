@@ -1,0 +1,117 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.backg {
+  background-size: cover;
+  background-image: url(../elements/city-wallpaper.jpeg);
+  text-align: center;
+  padding-top: 400px;
+  padding-bottom: 350px;
+  color: white;
+  font-size: 100px;
+  display: block;
+  background-position: center;
+}
+@font-face {
+  font-family: "technovia";
+  src: url('../elements/technott.ttf');
+}
+.backg p {
+  line-height: 80px;
+  font-family: "technovia";
+}
+
+.mage {
+  padding-top: 100px;
+  width: 75%;
+}
+
+.colimg {
+  padding: 0px;
+  margin: 0px;
+  max-width: 50%;
+}
+
+.citation {
+  display: inline;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.nom_petit {
+  color: #aaa;
+  font-size: 20px;
+  display: inline;
+  float: right;
+}
+
+.definition {
+
+}
+
+.legende {
+
+}
+
+.café {
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.imgcafe {
+  padding-bottom: 233px;
+  background-image: url(../elements/café4.png);
+  background-size: cover;
+  background-position: center;
+  height: 240px;
+}
+
+.caffe {
+  position: absolute;
+  top: -90px;
+}
+
+.develop {
+  margin-top: 20px;
+}
+
+.devcafe {
+  font-size: 12px;
+}
+
+.codev {
+  display: inline;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.grasdev {
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.contetitre {
+
+}
+
+.coucou {
+  background-color: #ff8000;
+  text-align: center;
+  width: 200px;
+  height: 150px;
+  display: none;
+}
+
+@media only screen
+and (min-width : 375px)
+and (max-width : 667px)
+and (orientation : landscape) {
+  .coucou {
+    display: block;
+  }
+}

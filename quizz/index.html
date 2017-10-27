@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>QUiiizzzzzz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <form method="post" id="quiz" action="./index.php">
+      <div class="container">
+        <h3 class="question">tite question</h3>
+        <div class="row">
+          <div class="col">
+            <input type="radio" name="answer_a" id="answer1" value="1">
+            <label class="question_a">
+              Yolo doom
+            </label>
+          </div>
+          <div class="col">
+            <input type="radio" name="answer_b" id="answer2" value="2">
+            <label class="question_b">
+              Yolo swag
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <input type="radio" name="answer_c" id="answer3" value="3">
+            <label class="question_c">
+              Yolo hee
+            </label>
+          </div>
+          <div class="col">
+            <input type="radio" name="answer_d" id="answer4" value="4">
+            <label class="question_d">
+              Yolo zbeull
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center">
+        <input type="hidden" class="hoho" name="hehe" value="">
+        <input class="nextt" type="button" value="go">
+      </div>
+
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <script>
+
+    var val = [0,0,0,0,0]; //question,repa,repb,repc,repd
+    var quizz = [];
+
+     quizz[0] = ["Tu arrives en formation de développeur :",
+     "Allez, je suis prêt à apprendre à coder !",
+     "C’est ici pour apprendre à ouvrir word ?",
+     "De toute façon, je n’apprendrai pas grand chose.",
+     "Vous pouvez répétez votre nom ?"];
+
+     quizz[1] = ["Tu abordes un langage inconnu :",
+     "J’écoute le cours, je fais l’exercice, c’est bon j’ai compris.",
+     "Mais c’est de l’hébreu, j’y arriverai pas !.. Ah, je lis un fichier image ?",
+     "C’est interprété ou compilé, y a une doc ?",
+     "Vous pouvez répéter le logiciel ?"];
+
+     quizz[2] = ["Un système d’exploitation :",
+     "Il y a Mac, et ubuntu xenial.",
+     "Comment on ferme la fenêtre ?",
+     "C’est pas comme arch ça, c’est trop facile.	",
+     "Vous pouvez répéter pour la machine virtuelle ?"];
+
+     quizz[3] = ["Avec les autres :",
+     "J’écoute les questions des autres, et la réponse.",
+     "Tu peux m’aider s’il te plaît ? *few moments later* Tu peux m’aider ?",
+     "Regarde il faut faire ça … Et moi c’est pas Morgan…",
+     "Tu peux me répéter l’énoncé ?"];
+
+     quizz[4] = ["Le prof lance une référence humouristique :",
+     "Je rigole, même si je n’ai pas compris.",
+     "Hein ? J’ai pas compris …",
+     "Ah ah, -[--->+<]>-----.[------->++<]>+.--[--->+<]>--.+[---->+<]>+++.+[----->+<]>.------------.+++++++++++.[-->+<]>--------.",
+     "Vous pouvez répéter la blague ..?"];
+
+     quizz[5] = ["A la pause :",
+     "Je sors, puis je rentre.",
+     "Premier à la machine à café !",
+     "Je reste dans la salle, histoire d’avancer un peu.",
+     "Vous pouvez répéter l’heure de la pause ?"];
+
+     quizz[6] = ["Quand tu rentres chez toi :",
+     "Je refais l’exercice, même si j’ai tout compris.",
+     "J’espère que ce sera plus facile demain.",
+     "Je fait tout ce que j’ai à faire, autre que du code.",
+     "Vous pouvez … Ah bah non, zut …"];
+
+     quizz[7] = ["L’autonomie en TP :",
+     "Je regarde le cours, je fais l’exercice.",
+     "Je demande tout à mon voisin.",
+     "Je boucle un super code, puis je vais voir les autres.",
+     "Vous pouvez répéter pour les groupes ?"];
+
+     quizz[8] = ["Tu bloques sur un point :",
+     "Je demande au professeur, et je fais ce qu’il dit.",
+     "J’appelle le prof toutes les 5 min.",
+     "Je ne peux pas être bloqué, quelqu’un a forcément trouvé un fix sur stack overflow",
+     "Vous pouvez m’aider ?"];
+
+     quizz[9] = ["Le stage :",
+     "Je vais appliquer tout ce que j’ai fait en formation.",
+     "J’espère que mon tuteur sera aussi bon que Morgan.",
+     "Une formalité .. professionnelle.",
+     "Vous pouvez répéter les dates ?"];
+
+     var val = [0,0,0,0,0];
+      $(document).ready(function () {
+        $(".question").html(quizz[val[0]][0]);
+        $(".question_a").html(quizz[val[0]][1]);
+        $(".question_b").html(quizz[val[0]][2]);
+        $(".question_c").html(quizz[val[0]][3]);
+        $(".question_d").html(quizz[val[0]][4]);
+
+        $('input[type=radio]').on('change', function(){
+          $('input[type=radio]').not(this).prop('checked', false);
+          });
+
+      $(".nextt").click(function() {
+        for (var i = 0; i < 4; i++) {
+          if($('#answer' + (i + 1) + '').is(':checked')){
+            //alert("it's checked");
+            var yolo = $('#answer' + (i + 1) + '').val();
+            yolo = yolo;
+            val[yolo] = val[yolo] + 1;
+            val[0] = val[0] + 1;
+            $('#answer' + (i + 1) + '').prop('checked', false);
+            //debugger;
+            if (val[0] == 10) {
+              $('.hoho').attr('value',val+'');
+              debugger;
+              $(".nextt").attr('type','submit');
+            }
+          };
+          //debugger;
+        };
+        $(".question").html(quizz[val[0]][0]);
+        $(".question_a").html(quizz[val[0]][1]);
+        $(".question_b").html(quizz[val[0]][2]);
+        $(".question_c").html(quizz[val[0]][3]);
+        $(".question_d").html(quizz[val[0]][4]);
+      });
+
+      });
+    </script>
+  </body>
+</html>
