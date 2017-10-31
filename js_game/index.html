@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>houhouhou</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <button class="resetButton" data-action="reset">Risette</button>
+    <section data-state="optionScreen" class="gameScreens hidden">
+      <h2>Monster Madness : Options</h2>
+      <label for="x">Nombre de l'axe X</label>
+      <input name="x" type="number" value="10">
+      <label for="y">Nombre de l'axe Y</label>
+      <input name="y" type="number" value="10">
+      <button class="startButton" data-action="startGame">Bring it on</button>
+    </section>
+    <section data-state="playScreen" class="gameScreens hidden"></section>
+    <section data-state="victory" class="hidden" style="color: white">
+      <h2>Damn Sonobiboom</h2>
+    </section>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="./js/script.js"></script>
+</html>

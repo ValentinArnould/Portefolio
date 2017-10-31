@@ -1,0 +1,65 @@
+body {
+  background-image:url('../curls.png')!important;
+  background: repeat;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height:100vh;
+}
+
+@font-face {
+  font-family: "technovia";
+  src: url('../technott.ttf');
+}
+
+.gameScreens {
+  background-color: grey;
+  display:flex;
+  width:918px;
+  height:632px;
+}
+
+.hidden {
+  display:none!important;
+}
+
+section.hidden {
+  display:none!important;
+}
+
+.resetButton {
+  position: fixed;
+  top: 20px;
+  left: auto;
+  right: auto;
+  width: auto;
+  height: 10px;
+}
+
+section[data-state="optionScreen"] {
+  background-image: url("../black_hole.jpg")!important;
+  background: repeat;
+  color: white;
+  font-family: 'technovia',fantasy;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.gameContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.gameDiv {
+  width: 58px!important;
+  height: 58px!important;
+  border: 1px solid black!important;
+}
+
+.gameDiv img {
+  width: 100%;
+  height: 100%;
+}
