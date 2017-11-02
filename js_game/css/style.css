@@ -63,3 +63,7 @@ section[data-state="optionScreen"] {
   width: 100%;
   height: 100%;
 }
+
+.mur {
+  background-color: #000;
+}
