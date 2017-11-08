@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  //position: fixed;
+  background-color: #ff8000;
+}
+
+.main_nom {
+  margin-bottom: 0;
+}
+
+.main_menu {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.develop {
+  transition: 0.5s;
+  visibility: visible;
+  position: absolute;
+  opacity: 0;
+  right: -100px;
+}
+
+.fleche {
+  display: inline;
+  float: right;
+  font-size: 50px;
+  /*padding-top: 10px;*/
+  align-items: center;
+  padding-right: 20px;
+  transition: 1s;
+}
+
+.mainc {
+  margin-top: 5%;
+  width: 50%;
+}
+
+.present {
+  transition: 2s;
+}
+
+.bigimage {
+  position: relative;
+  opacity: 0;
+  transition: 2s all;
+  margin: 0 auto;
+  display: inline;
+}
+
+.titres {
+  transition: 1s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  opacity: 0;
+}
+
+.secteur {
+  transition: 1s;
+  position: relative;
+  top: -100%;
+  /*left: 0%;*/
+/*width: 500px;*/
+  opacity: 0;
+}
+.interets {
+  transition: 1s;
+  position: relative;
+  top: -100%;
+  /*left: 33%;
+/*width: 500px;*/
+  opacity: 0;
+}
+.qualites {
+  transition: 1s;
+  position: relative;
+  top: -100%;
+  /*left:66%;
+/*width: 500px;*/
+  opacity: 0;
+}
+
+
+.imgmoa {
+  max-width: 100%;
+  border-radius: 50%;
+  display: inline;
+}
+
+.mainc .col {
+
+}
+
+header ul li {
+
+}
+
+header li {
+  padding-left: 5px;
+  text-transform: uppercase;
+}
+
+header li:hover {
+  background-color: #000;
+  transition: 1s all;
+}
+
+header p:hover {
+  /*rien*/
+}
+
+header li a:hover {
+  color: #fff;
+}
+
+header li a {
+  color: black;
+  font-weight: bold;
+}
+
+header ul {
+  padding-left: 0;
+}
+
+.list-no-style {
+  list-style: none;
+}
+
+.list-no-style li a {
+  text-decoration: none;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse;
+}
+
+.half-size {
+  width: 50%;
+}
+
+.min-size-small {
+  min-width: 300px;
+}
+
+.section-container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+@media screen and (max-width : 800px) {
+  .flex-container {
+    padding-top: 1%;
+  }
+
+  .section-container {
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+}
